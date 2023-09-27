@@ -29,10 +29,5 @@
 
 ### [Project Page](https://showlab.github.io/Show-1) | [Paper](https://arxiv.org/abs/xxxx.xxxxx) 
 
-
-https://github.com/showlab/Show-1/assets/55792387/f3cad1d7-9f53-4a72-ad21-0c3214a39509
-
-
-
-
+https://github.com/showlab/Show-1/assets/55792387/32242135-25a5-4757-b494-91bf314581e8
 
