@@ -45,7 +45,7 @@ Pytorch 2.0+ is highly recommended for more efficiency and speed on GPUs.
 
 ### Weights
 
-All weights are available in show lab [huggingface](https://huggingface.co/showlab)! Please check [key frames generation](https://huggingface.co/showlab/show-1-base), [interpolation](https://huggingface.co/showlab/show-1-interpolation), [superresolution stage 1](https://huggingface.co/showlab/show-1-sr1) and [superresolution stage 2](https://huggingface.co/showlab/show-1-sr2) modules. We also use [deep-floyd-if superresolution stage 1](https://huggingface.co/DeepFloyd/IF-II-L-v1.0) model for the first frame superresolution. To donwload deep-floyd-if models, you need follow their [official instructions.](https://huggingface.co/DeepFloyd/IF-II-L-v1.0)
+All weights are available in show lab [huggingface](https://huggingface.co/showlab)! Please check [key frames generation](https://huggingface.co/showlab/show-1-base), [interpolation](https://huggingface.co/showlab/show-1-interpolation), [superresolution stage 1](https://huggingface.co/showlab/show-1-sr1) and [superresolution stage 2](https://huggingface.co/showlab/show-1-sr2) modules. We also use [deep-floyd-if superresolution stage 1](https://huggingface.co/DeepFloyd/IF-II-L-v1.0) model for the first frame superresolution. To download deep-floyd-if models, you need follow their [official instructions.](https://huggingface.co/DeepFloyd/IF-II-L-v1.0)
 ## Inference 
 
 To run diffusion models for text-to-video generation, run this command:
