@@ -1,0 +1,17 @@
+diffusers==0.19.3
+bitsandbytes==0.35.4
+decord==0.6.0
+transformers==4.29.1
+accelerate==0.18.0
+imageio==2.14.1
+torch==2.0.0
+torchvision==0.15.0
+beautifulsoup4
+tensorboard
+sentencepiece
+safetensors
+modelcards
+omegaconf
+pandas
+einops
+ftfy
