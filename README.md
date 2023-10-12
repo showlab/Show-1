@@ -30,7 +30,7 @@
 ### [Project Page](https://showlab.github.io/Show-1) | [arXiv](https://arxiv.org/abs/2309.15818) | [PDF](https://arxiv.org/abs/2309.15818)
 
 ## News
-- [10/22/2023] Code and weights released!
+- [10/12/2023] Code and weights released!
 
 ## Setup
 
