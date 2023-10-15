@@ -54,7 +54,7 @@ To run diffusion models for text-to-video generation, run this command:
 python run_inference.py
 ```
 
-The output videos from different modules will be stored in "outputs" folder with the gif format. The code will automatically donwload  module weights from huggingface. Otherwise, you can donwload weights manually with git lfs then change the "pretrained_model_path" to your local path. Take key frames generation module for example:
+The output videos from different modules will be stored in "outputs" folder with the gif format. The code will automatically download  module weights from huggingface. Otherwise, you can download weights manually with git lfs then change the "pretrained_model_path" to your local path. Take key frames generation module for example:
 
 ```bash
 git lfs install
