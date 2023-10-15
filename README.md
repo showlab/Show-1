@@ -45,7 +45,7 @@ Pytorch 2.0+ is highly recommended for more efficiency and speed on GPUs.
 
 ### Weights
 
-All weights are available in show lab [huggingface](https://huggingface.co/showlab)! Please check [key frames generation](https://huggingface.co/showlab/show-1-base), [interpolation](https://huggingface.co/showlab/show-1-interpolation), [superresolution stage 1](https://huggingface.co/showlab/show-1-sr1) and [superresolution stage 2](https://huggingface.co/showlab/show-1-sr2) modules. We also use [deep-floyd-if superresolution stage 1](https://huggingface.co/DeepFloyd/IF-II-L-v1.0) model for the first frame superresolution. To download deep-floyd-if models, you need follow their [official instructions.](https://huggingface.co/DeepFloyd/IF-II-L-v1.0)
+All weights are available in the show lab [huggingface](https://huggingface.co/showlab)! Please check [key frames generation](https://huggingface.co/showlab/show-1-base), [interpolation](https://huggingface.co/showlab/show-1-interpolation), [superresolution stage 1](https://huggingface.co/showlab/show-1-sr1) and [superresolution stage 2](https://huggingface.co/showlab/show-1-sr2) modules. We also use the [deep-floyd-if superresolution stage 1](https://huggingface.co/DeepFloyd/IF-II-L-v1.0) model for the first frame superresolution. To download deep-floyd-if models, you need to follow their [official instructions.](https://huggingface.co/DeepFloyd/IF-II-L-v1.0)
 ## Inference 
 
 To run diffusion models for text-to-video generation, run this command:
@@ -54,7 +54,7 @@ To run diffusion models for text-to-video generation, run this command:
 python run_inference.py
 ```
 
-The output videos from different modules will be stored in "outputs" folder with the gif format. The code will automatically download  module weights from huggingface. Otherwise, you can download weights manually with git lfs then change the "pretrained_model_path" to your local path. Take key frames generation module for example:
+The output videos from different modules will be stored in the "outputs" folder with the gif format. The code will automatically download module weights from huggingface. Otherwise, you can download weights manually with git lfs and then change the "pretrained_model_path" to your local path. Take the key frames generation module, for example:
 
 ```bash
 git lfs install
