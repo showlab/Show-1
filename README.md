@@ -2,6 +2,11 @@
 <h1>🎬Show-1</h1>
 </div>
 
+![Show1](https://github.com/Nishu0/Show-1/assets/89217455/919fe927-24e8-44fb-8cba-98463bf9bc11)
+
+
+
+
 <div>
 <div align="center">
     <a href='https://junhaozhang98.github.io/' target='_blank'>David Junhao Zhang<sup>*</sup></a>&emsp;
@@ -26,6 +31,10 @@
 
 ![](https://img.shields.io/github/stars/showlab/Show-1?style=social)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fshowlab%2FShow-1&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+## About Project
+
+Significant advancements have been achieved in the realm of large-scale pre-trained text-to-video Diffusion Models (VDMs). However, previous methods either rely solely on pixel-based VDMs, which come with high computational costs, or on latent-based VDMs, which often struggle with precise text-video alignment. In this paper, we are the first to propose a hybrid model, dubbed as Show-1, which marries pixel-based and latent-based VDMs for text-to-video generation. Our model first uses pixel-based VDMs to produce a low-resolution video of strong text-video correlation. After that, we propose a novel expert translation method that employs the latent-based VDMs to further upsample the low-resolution video to high resolution. Compared to latent VDMs, Show-1 can produce high-quality videos of precise text-video alignment; Compared to pixel VDMs, Show-1 is much more efficient (GPU memory usage during inference is 15G vs 72G). We also validate our model on standard video generation benchmarks.
 
 ### [Project Page](https://showlab.github.io/Show-1) | [arXiv](https://arxiv.org/abs/2309.15818) | [PDF](https://arxiv.org/abs/2309.15818)
 
@@ -79,6 +88,76 @@ If you make use of our work, please cite our paper.
       primaryClass={cs.CV}
 }
 ```
+
+## Contribution Guidelines
+
+Is there is anything missing any of your favorite features, which you think you can add to it❓ I invite you to contribute to this project and make it better. To start contributing, follow the below guidelines:
+
+**1.** Fork [this](https://github.com/showlab/Show-1.git) repository.
+
+**2.** Clone your forked copy of the project.
+
+```
+git clone https://github.com/showlab/Show-1.git
+```
+
+**3.** Navigate to the project directory :file_folder: .
+
+```
+cd Go-with-flow
+```
+
+**4.** Add a reference(remote) to the original repository.
+
+```
+git remote add upstream https://github.com/showlab/Show-1.git
+```
+
+**5.** Check the remotes for this repository.
+
+```
+git remote -v
+```
+
+**6.** Always take a pull from the upstream repository to your master branch to keep it at par with the main project(updated repository).
+
+```
+git pull upstream main
+```
+
+**7.** Create a new branch.
+
+```
+git checkout -b <your_branch_name>
+```
+
+**8.** Perfom your desired changes to the code base.
+
+**9.** Track your changes:heavy_check_mark: .
+
+```
+git add .
+```
+
+**10.** Commit your changes .
+
+```
+git commit -m "Relevant message"
+```
+
+**11.** Push the committed changes in your feature branch to your remote repo.
+
+```
+git push -u origin <your_branch_name>
+```
+
+**12.** To create a pull request, click on `compare and pull requests`.
+
+**13.** Add appropriate title and description to your pull request explaining your changes and efforts done.
+
+**14.** Click on `Create Pull Request`.
+
+**15** Voila :exclamation: You have made a PR to the Show1 :boom: . Wait for your submission to be accepted and your PR to be merged.
 
 ## Shoutouts
 
