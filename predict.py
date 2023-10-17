@@ -91,6 +91,20 @@ class Predictor(BasePredictor):
         num_frames: int = Input(
             description="Number of frames in the generated video", default=8
         ),
+        num_base_steps: int = Input(
+            description="Number of denoising steps in key frame generation", default=75
+        ),
+        num_interpolation_steps: int = Input(
+            description="Number of denoising steps in interpolation", default=75
+        ),
+        num_sr1_steps: int = Input(
+            description="Number of denoising steps in stage 1 super resolution",
+            default=175,
+        ),
+        num_sr2_steps: int = Input(
+            description="Number of denoising steps in stage 2 super resolution",
+            default=50,
+        ),
         seed: int = Input(
             description="Random seed. Leave blank to randomize the seed", default=None
         ),
@@ -110,7 +124,7 @@ class Predictor(BasePredictor):
             num_frames=num_frames,
             height=40,
             width=64,
-            num_inference_steps=75,
+            num_inference_steps=num_base_steps,
             guidance_scale=9.0,
             generator=torch.manual_seed(seed),
             output_type="pt",
@@ -147,7 +161,7 @@ class Predictor(BasePredictor):
                 num_frames=batch_i.shape[2],
                 height=40,
                 width=64,
-                num_inference_steps=75,
+                num_inference_steps=num_interpolation_steps,
                 guidance_scale=4.0,
                 generator=torch.manual_seed(seed),
                 output_type="pt",
@@ -169,7 +183,6 @@ class Predictor(BasePredictor):
         )
         for i in range(0, num_frames - window_size + 1, stride):
             batch_i = video_frames[:, :, i : i + window_size, ...]
-            all_frame_cond = None
 
             if i == 0:
                 first_frame_cond = self.pipe_sr_1_image(
@@ -195,7 +208,7 @@ class Predictor(BasePredictor):
                 first_frame_cond=first_frame_cond,
                 height=height * 4,
                 width=width * 4,
-                num_inference_steps=125,
+                num_inference_steps=num_sr1_steps,
                 guidance_scale=7.0,
                 noise_level=250,
                 generator=torch.manual_seed(seed),
@@ -215,7 +228,7 @@ class Predictor(BasePredictor):
             negative_prompt=negative_prompt,
             video=video_frames,
             strength=0.8,
-            num_inference_steps=50,
+            num_inference_steps=num_sr2_steps,
             generator=torch.manual_seed(seed),
             output_type="pt",
         ).frames
