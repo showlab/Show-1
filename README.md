@@ -41,27 +41,29 @@
 pip install -r requirements.txt
 ```
 
-Pytorch 2.0+ is highly recommended for more efficiency and speed on GPUs. 
+Note: PyTorch 2.0+ is highly recommended for more efficiency and speed on GPUs. 
 
 
 ### Weights
 
-All weights are available in show lab [huggingface](https://huggingface.co/showlab)! Please check [key frames generation](https://huggingface.co/showlab/show-1-base), [interpolation](https://huggingface.co/showlab/show-1-interpolation), [superresolution stage 1](https://huggingface.co/showlab/show-1-sr1) and [superresolution stage 2](https://huggingface.co/showlab/show-1-sr2) modules. We also use [deep-floyd-if superresolution stage 1](https://huggingface.co/DeepFloyd/IF-II-L-v1.0) model for the first frame superresolution. To download deep-floyd-if models, you need follow their [official instructions.](https://huggingface.co/DeepFloyd/IF-II-L-v1.0)
+All model weights for Show-1 are available on [Show Lab's HuggingFace page](https://huggingface.co/showlab): Base Model ([show-1-base](https://huggingface.co/showlab/show-1-base)), Interpolation Model ([show-1-interpolation](https://huggingface.co/showlab/show-1-interpolation)), and Super-Resolution Model ([show-1-sr1](https://huggingface.co/showlab/show-1-sr1), [show-1-sr2](https://huggingface.co/showlab/show-1-sr2)).
+
+Note that our [show-1-sr1](https://huggingface.co/showlab/show-1-sr1) incorporates the image super-resolution model from DeepFloyd-IF, [DeepFloyd/IF-II-L-v1.0](https://huggingface.co/DeepFloyd/IF-II-L-v1.0), to upsample the first frame of the video. To obtain the respective weights, follow their [official instructions](https://huggingface.co/DeepFloyd/IF-II-L-v1.0).
+
 ## Inference 
 
-To run diffusion models for text-to-video generation, run this command:
+To generate a video from a text prompt, run the command below:
 
 ```bash
 python run_inference.py
 ```
 
-The output videos from different modules will be stored in "outputs" folder with the gif format. The code will automatically download  module weights from huggingface. Otherwise, you can download weights manually with git lfs then change the "pretrained_model_path" to your local path. Take key frames generation module for example:
+By default, the videos generated from each stage are saved to the `outputs` folder in the GIF format. The script will automatically fetch the necessary model weights from HuggingFace. If you prefer, you can manually download the weights using git lfs and then update the `pretrained_model_path` to point to your local directory. Here's how:
 
 ```bash
 git lfs install
-git clone https://huggingface.co/showlab/show-1-base
+git clone https://huggingface.co/showlab/show-1-base 
 ```
-
 
 
 ## Demo Video
@@ -72,21 +74,23 @@ https://github.com/showlab/Show-1/assets/55792387/32242135-25a5-4757-b494-91bf31
 If you make use of our work, please cite our paper.
 ```bibtex
 @misc{zhang2023show1,
-      title={Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation}, 
-      author={David Junhao Zhang and Jay Zhangjie Wu and Jia-Wei Liu and Rui Zhao and Lingmin Ran and Yuchao Gu and Difei Gao and Mike Zheng Shou},
-      year={2023},
-      eprint={2309.15818},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+    title={Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation}, 
+    author={David Junhao Zhang and Jay Zhangjie Wu and Jia-Wei Liu and Rui Zhao and Lingmin Ran and Yuchao Gu and Difei Gao and Mike Zheng Shou},
+    year={2023},
+    eprint={2309.15818},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
-## Notes
-Thank you for considering our model for commercial use case. We are working with university(NUS) to figure out the exact paperwork needed for approving commercial use request. In the meantime, to speed up the process, we'd like to solicit intent of interest from community and later on we will process these requests with high priority. If you are keen, can you kindly email us at mike.zheng.shou@gmail.com and junhao.zhang@u.nus.edu to answer the following questions, if possible:
+
+## Commercial Use
+
+We are working with the university (NUS) to figure out the exact paperwork needed for approving commercial use request. In the meantime, to speed up the process, we'd like to solicit intent of interest from community and later on we will process these requests with high priority. If you are keen, can you kindly email us at mike.zheng.shou@gmail.com and junhao.zhang@u.nus.edu to answer the following questions, if possible:
 - Who are you / your company?
 - What is your product / application?
 - How Show-1 can benefit your product?
 
 ## Shoutouts
 
-- This code heavily builds on [diffusers](https://github.com/huggingface/diffusers), [deep-floyd-if](https://github.com/deep-floyd/IF), [modelscope](https://huggingface.co/damo-vilab/modelscope-damo-text-to-video-synthesis), [zeroscope](https://huggingface.co/cerspense/zeroscope_v2_576w). Thanks for open-sourcing!
+- This work heavily builds on [diffusers](https://github.com/huggingface/diffusers), [deep-floyd/IF](https://github.com/deep-floyd/IF), [modelscope](https://huggingface.co/damo-vilab/modelscope-damo-text-to-video-synthesis), and [zeroscope](https://huggingface.co/cerspense/zeroscope_v2_576w). Thanks for open-sourcing!
 
