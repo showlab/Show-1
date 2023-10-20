@@ -27,7 +27,8 @@
 ![](https://img.shields.io/github/stars/showlab/Show-1?style=social)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fshowlab%2FShow-1&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-### [Project Page](https://showlab.github.io/Show-1) | [arXiv](https://arxiv.org/abs/2309.15818) | [PDF](https://arxiv.org/abs/2309.15818) | [Replicate Demo](https://replicate.com/cjwbw/show-1) 
+
+### [Project Page](https://showlab.github.io/Show-1) | [arXiv](https://arxiv.org/abs/2309.15818) | [PDF](https://arxiv.org/abs/2309.15818) | [🤗 Space](https://huggingface.co/spaces/showlab/Show-1) | [Colab](https://colab.research.google.com/github/camenduru/Show-1-colab/blob/main/Show_1_steps_colab.ipynb) | [Replicate Demo](https://replicate.com/cjwbw/show-1) 
 
 
 ## News
@@ -50,7 +51,7 @@ All model weights for Show-1 are available on [Show Lab's HuggingFace page](http
 
 Note that our [show-1-sr1](https://huggingface.co/showlab/show-1-sr1) incorporates the image super-resolution model from DeepFloyd-IF, [DeepFloyd/IF-II-L-v1.0](https://huggingface.co/DeepFloyd/IF-II-L-v1.0), to upsample the first frame of the video. To obtain the respective weights, follow their [official instructions](https://huggingface.co/DeepFloyd/IF-II-L-v1.0).
 
-## Inference 
+## Usage 
 
 To generate a video from a text prompt, run the command below:
 
@@ -63,6 +64,13 @@ By default, the videos generated from each stage are saved to the `outputs` fold
 ```bash
 git lfs install
 git clone https://huggingface.co/showlab/show-1-base 
+```
+
+A demo is also available on the [`showlab/Show-1` 🤗 Space](https://huggingface.co/spaces/showlab/Show-1).
+You can use the gradio demo locally by running:
+
+```bash
+python app.py
 ```
 
 
@@ -93,4 +101,5 @@ We are working with the university (NUS) to figure out the exact paperwork neede
 ## Shoutouts
 
 - This work heavily builds on [diffusers](https://github.com/huggingface/diffusers), [deep-floyd/IF](https://github.com/deep-floyd/IF), [modelscope](https://huggingface.co/damo-vilab/modelscope-damo-text-to-video-synthesis), and [zeroscope](https://huggingface.co/cerspense/zeroscope_v2_576w). Thanks for open-sourcing!
+- Thanks 
 
