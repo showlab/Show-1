@@ -81,13 +81,11 @@ https://github.com/showlab/Show-1/assets/55792387/32242135-25a5-4757-b494-91bf31
 ## Citation
 If you make use of our work, please cite our paper.
 ```bibtex
-@misc{zhang2023show1,
-    title={Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation}, 
-    author={David Junhao Zhang and Jay Zhangjie Wu and Jia-Wei Liu and Rui Zhao and Lingmin Ran and Yuchao Gu and Difei Gao and Mike Zheng Shou},
-    year={2023},
-    eprint={2309.15818},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@article{zhang2023show,
+  title={Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation},
+  author={Zhang, David Junhao and Wu, Jay Zhangjie and Liu, Jia-Wei and Zhao, Rui and Ran, Lingmin and Gu, Yuchao and Gao, Difei and Shou, Mike Zheng},
+  journal={arXiv preprint arXiv:2309.15818},
+  year={2023}
 }
 ```
 
