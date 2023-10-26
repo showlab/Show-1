@@ -47,7 +47,7 @@ def tensor2vid(video: torch.Tensor, mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]) -
     images = video.permute(2, 3, 0, 4, 1).reshape(
         f, h, i * w, c
     )  # 1st (frames, h, batch_size, w, c) 2nd (frames, h, batch_size * w, c)
-    images = images.unbind(dim=0)  # prepare a list of indvidual (consecutive frames)
+    images = images.unbind(dim=0)  # prepare a list of individual (consecutive frames)
     images = [(image.cpu().numpy() * 255).astype("uint8") for image in images]  # f h w c
     return images
 
@@ -493,7 +493,7 @@ class TextToVideoIFPipeline(DiffusionPipeline, LoraLoaderMixin):
         # &amp
         caption = re.sub(r"&amp", "", caption)
 
-        # ip adresses:
+        # ip addresses:
         caption = re.sub(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", " ", caption)
 
         # article ids:
