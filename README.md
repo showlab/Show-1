@@ -32,6 +32,7 @@
 
 
 ## News
+- [10/06/2024] Show-1 was accepted to IJCV!
 - [10/12/2023] Code and weights released!
 
 ## Setup
