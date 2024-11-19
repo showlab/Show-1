@@ -102,3 +102,8 @@ We are working with the university (NUS) to figure out the exact paperwork neede
 - This work heavily builds on [diffusers](https://github.com/huggingface/diffusers), [deep-floyd/IF](https://github.com/deep-floyd/IF), [modelscope](https://huggingface.co/damo-vilab/modelscope-damo-text-to-video-synthesis), and [zeroscope](https://huggingface.co/cerspense/zeroscope_v2_576w). Thanks for open-sourcing!
 - Thanks [@camenduru](https://github.com/camenduru) for providing the CoLab demo and [@chenxwh](https://github.com/chenxwh) for providing replicate demo.
 
+## Contributors
+
+<a href="[https://github.com/localsend/localsend/graphs/contributors](https://github.com/showlab/Show-1/graphs/contributors)">
+  <img src="https://contrib.rocks/image?repo=showlab/Show-1"  alt="Show-1 Contributors"/>
+</a>
