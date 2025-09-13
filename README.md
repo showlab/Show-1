@@ -24,11 +24,10 @@
 
 -----------------
 
-<a href="https://trendshift.io/repositories/3499" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3499" alt="showlab%2FShow-1 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a></p>
-
-
 ### [Project Page](https://showlab.github.io/Show-1) | [arXiv](https://arxiv.org/abs/2309.15818) | [PDF](https://arxiv.org/abs/2309.15818) | [🤗 Space](https://huggingface.co/spaces/showlab/Show-1) | [Colab](https://colab.research.google.com/github/camenduru/Show-1-colab/blob/main/Show_1_steps_colab.ipynb) | [Replicate Demo](https://replicate.com/cjwbw/show-1) 
 
+
+<a href="https://trendshift.io/repositories/3499" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3499" alt="showlab%2FShow-1 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a></p>
 
 ## News
 - [10/06/2024] Show-1 was accepted to IJCV!
